@@ -1,0 +1,18 @@
+header span {
+    margin-right: 30px;
+    font-weight: bold;
+  }
+  a {
+    cursor: grab;
+    color: white;
+    text-decoration: none;
+  }
+  .container-fluid{
+    height: 400px;
+  }
+  .brand-name{
+    background-color: #6c5ce7;
+  }
+  .brand-name:hover {
+    color: #f8f9fa;
+  }

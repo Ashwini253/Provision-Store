@@ -1,0 +1,35 @@
+ <div class="container-fluid">
+  <div class="row">
+    <div class="sidebar col-md-3">
+      <ul class="nav flex-column">
+        <li class="nav-item" routerLinkActive="active">
+        <h3> <a class="nav-link" routerLink="list" (click)="getList()">Products</a> </h3> 
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+        <h3><a class="nav-link" routerLink="/about">About</a></h3>
+        </li>
+      </ul>
+    </div>
+    <div class="main col-md-9">
+        <mat-card-header>
+            <h3><b>Products List</b></h3>
+        </mat-card-header>
+        <div class="main col-md-9 d-flex justify-content-between">
+          <mat-card *ngFor="let item of ProductList" class="m-1" style="width: 150px">
+            <mat-card-content>
+                <img mat-card-image [src]="item.productCategory.productCategoryImage"  />
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-content class="m-2 p-2">
+              {{item.productCategory.productCategoryName}}
+            </mat-card-content>
+          </mat-card> 
+        </div>
+    </div>
+  <mat-card *ngIf = "notFound">
+    <mat-card-header>
+        <mat-card-title class="m-3">Record Not Found</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
+ </div>
